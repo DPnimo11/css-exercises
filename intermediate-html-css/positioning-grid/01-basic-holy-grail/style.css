@@ -2,6 +2,7 @@ body,
 html {
   height: 100%;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -9,6 +10,9 @@ html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 10% 10% 70% 10%;
+  grid-template-columns: 20% 80%;
 }
 
 .container div {
@@ -18,14 +22,17 @@ html {
   font-weight: bold;
   color: white;
   border-radius: 15px;
+  margin: 5px;
 }
 
 .header {
   background-color: #006157;
+  grid-area: 1 / 1 / 2 / -1;
 }
 
 .sidebar {
   background-color: #005B94;
+  grid-area: 2 / 1 / 4 / 2;
 }
 
 .nav {
@@ -38,6 +45,7 @@ html {
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / -1;
 }
 
 .article p {
